@@ -5,4 +5,4 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-COPY manage.py backend /code/
+COPY manage.py pytest.ini backend /code/
