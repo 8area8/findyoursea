@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: 'HomePage',
+  name: 'Login',
 
   components: {
   }
