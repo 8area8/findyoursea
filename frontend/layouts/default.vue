@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <section class="main-content columns">
-      <div class="container column is-10">
-        <Nuxt />
+  <div class="sea-cover">
+    <div class="section">
+      <div class="container">
+        <div class="has-text-white is-size-1 is-flex is-justify-content-center">
+          <Logo />
+          Find You Sea
+        </div>
       </div>
-    </section>
+    </div>
+    <Nuxt />
   </div>
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
 export default {
+  components: { Logo },
   data () {
     return {
 
@@ -22,3 +28,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.sea-cover {
+  background-image: url(~/assets/img/johannes-plenio-boat.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  min-height: 100vh;
+}
+</style>

@@ -1,9 +1,12 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      Index
+  <div class="section">
+    <div class="container">
+      <div class="columns is-mobile">
+        <div class="box mx-auto">
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -15,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.box {
+  min-width: 50vw;
+}
+</style>
