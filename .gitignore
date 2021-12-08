@@ -135,3 +135,4 @@ data/db
 staticfiles
 .nuxt
 frontend/coverage
+.eslintcache
