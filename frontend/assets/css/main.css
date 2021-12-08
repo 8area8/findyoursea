@@ -1,0 +1,5 @@
+@import "~leaflet/dist/leaflet.css";
+
+.box {
+  min-width: 50vw;
+}

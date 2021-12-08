@@ -22,8 +22,8 @@ export default {
     }
   },
   mounted () {
-    if (localStorage.getItem('access')) {
-      this.$store.commit('auth/authenticated', true)
+    if (!localStorage.getItem('access')) {
+      return this.$router.push({ name: 'login' })
     }
   }
 }
