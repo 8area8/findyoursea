@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,13 +39,9 @@ export default {
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-leaflet'
   ],
-
-  // router
-  router: {
-    middleware: 'authenticated'
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

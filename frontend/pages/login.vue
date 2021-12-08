@@ -113,9 +113,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.box {
-  min-width: 50vw;
-}
-</style>
