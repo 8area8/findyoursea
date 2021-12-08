@@ -14,6 +14,11 @@ export default {
     return {
 
     }
+  },
+  mounted () {
+    if (localStorage.getItem('access')) {
+      this.$store.commit('auth/authenticated', true)
+    }
   }
 }
 </script>
