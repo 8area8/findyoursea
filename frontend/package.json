@@ -12,10 +12,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxt/test-utils": "^0.2.2",
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
-    "nuxt-buefy": "^0.4.8"
+    "nuxt-buefy": "^0.4.8",
+    "supertest": "^6.1.6"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -27,7 +29,8 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "jest": "^27.0.5",
+    "jest": "^27.4.3",
+    "setimmediate": "^1.0.5",
     "vue-jest": "^3.0.4"
   }
 }
