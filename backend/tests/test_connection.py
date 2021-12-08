@@ -15,6 +15,8 @@ def test_basic_login(user):
     data = {"email": "test@gmail.com", "password": "mypassword123&é"}
     res = client.post("/api/token/", data, format="json")
     assert res.status_code == 200
+    assert res.data["access"]
+    assert res.data["refresh"]
 
 
 @pytest.mark.django_db

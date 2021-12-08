@@ -29,7 +29,7 @@ services:
       dockerfile: ./Dockerfile.frontend.dev
     command: npm run dev
     volumes:
-      - .:/frontend
+      - ./frontend/:/app
       - /frontend/node_modules/
     expose:
       - "3000"
