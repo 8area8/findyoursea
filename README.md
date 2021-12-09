@@ -19,6 +19,12 @@ Finally, Nginx serves the applications as a reverse proxy.
 
 Install [Docker and Docker-Compose](https://docs.docker.com/engine/install/ubuntu/) version 3.9+
 
+Install the dependencies :
+
+- `cd frontend && npm i -D`
+- `python3.7 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt`
+
+> **NOTE :** If you want to dev the project, you should install the python venv locally and the npm venv locally. There are other alternatives, less interesting in my opinion
 
 Then build the dependencies :
 
@@ -39,7 +45,7 @@ docker-compose build <my_service> # --no-cache if needed
 Run the services :
 
 ```sh
-docker-compose --env-file .env up
+docker-compose --env-file .env up  # --force-recreate if needed
 ```
 
 Run the migrations :
@@ -47,8 +53,6 @@ Run the migrations :
 ```sh
 docker exec findyoursea-backend-1 python manage.py migrate
 ```
-
-> **NOTE :** If you want to dev the project, you should install the python venv locally and the npm venv locally. There are other alternatives, less interesting in my opinion
 
 Launch bash on a container (used to migrate, run tests, etc.) :
 
@@ -78,3 +82,9 @@ For production, we need to :
 - Hide the backend API ?
 - Set [always restart](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart) for each container
 - [Remove the volumes](https://docs.docker.com/compose/production/)
+
+## FAQ
+
+Django won't connect to docker!
+
+- Sometimes you have to delete the Docker volume, which keeps bad data cached despite us :/
