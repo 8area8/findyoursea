@@ -5,6 +5,8 @@ import random
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from backend.apps.coordinates.api import Geocoder
+
 
 class CoordinatesView(APIView):
     """Coordinates main view."""
@@ -16,5 +18,6 @@ class CoordinatesView(APIView):
 
         Return data with {'long': int, 'lat': int}
         """
-        long, lat = random.uniform(-180, 180), random.uniform(-90, 90)
+        geocoder = Geocoder()
+        long, lat = geocoder.generate_sea_coords()
         return Response(data={"long": long, "lat": lat}, content_type="json")

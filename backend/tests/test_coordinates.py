@@ -37,10 +37,9 @@ def test_coords_target_sea_only():
     assert geocoder.is_sea(long, lat)
 
 
-# def test_coords_target_sea_only_from_api():
-#     """Check that the coords targets the seas and not the lands."""
-#     pass
-
-
-# from random import uniform
-# x, y = uniform(-180,180), uniform(-90, 90)
+def test_coords_target_sea_only_from_api():
+    """Check that the coords targets the seas and not the lands."""
+    result = client.get(coords_url)
+    assert result.status_code == 200
+    long, lat = result.data.values()
+    assert Geocoder().is_sea(long, lat)
