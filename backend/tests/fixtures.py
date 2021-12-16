@@ -3,9 +3,12 @@
 from rest_framework.test import APIClient
 import pytest
 
+from dotenv import load_dotenv
+
 from backend.apps.users.models import User
 
 
+load_dotenv()
 client = APIClient()
 
 

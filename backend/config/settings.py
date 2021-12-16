@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     # my apps
     "backend.apps.users",
+    "backend.apps.coordinates",
 ]
 
 MIDDLEWARE = [
